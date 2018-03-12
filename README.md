@@ -15,7 +15,7 @@ Exercice à faire seul.
 2. Réflexion sur **l'UX** : Nous allons avoir besoin d'une OnePage et d'un multi site. Le OnePage sera composé des informations élémentaire du site (C'est quoi cette entreprise, qui est la patron,... ) avec quelques éléments du stocks. (N'oubliez pas de mettre un boutton pour accéder au site multipage).
 
 3. **Développement** du site multipage en utilisant une architecture MVC pour la gestion des pages  
-	1. Comprendre le MVC [(lire ces slides en pdf)](./MVC.pdf),
+	1. Comprendre le MVC [(lire ces slides en pdf)](https://github.com/becodeorg/Turing-promo-4/blob/master/parcours/4-MVC/MVC.pdf),
 	2. Gérer certains éléments répété avec les include PHP,
 	3. Site responsive (framework) et design,
 	4. L'url doit ressembler à (127.0.0.10:3000/index.php?action=contact)
