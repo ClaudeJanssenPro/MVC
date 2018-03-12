@@ -6,7 +6,7 @@
 - Créer un mini-site de 5 pages en utilisant une architecture MVC
 - Pour constituer le contenu de ce mini-site, on va reproduire le site de [Didier Motte](https://didiermotte.be/).
 
-Exercice à faire seul. 
+Exercice à faire seul.
 
 ## Planning
 
@@ -46,4 +46,3 @@ assets
 
 Voici un exemple d'application utilisant un MVC:
 [Git d'un ancien apprenant de la promo 1](https://github.com/ModjoInc/12-MVC/tree/master/AppMVC)
-
