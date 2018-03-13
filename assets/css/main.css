@@ -1,0 +1,7 @@
+body {
+	background-color: #2e3141;
+	background-image: url("../../images/NY_docks_o.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+}
