@@ -1,0 +1,880 @@
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+#logo b,
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+.aligncenter {
+  margin: auto;
+  text-align: center;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+img {
+  vertical-align: middle;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+// TYPOGRAPHY
+
+a {
+  text-decoration: none;
+  color: $black;
+  border-bottom: 1px dotted $black;
+
+  &:hover {
+    border-bottom: 1px solid $black;
+  }
+}
+
+html {
+  font-size: 62.5%;
+}
+
+* {
+  // Default "body text" font-size
+  @include font-size(1.3);
+
+  font-family: $sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: $sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin: 0 0 40px;
+}
+
+h1 {
+  @include font-size(2.6);
+
+  text-align: center;
+}
+
+h2 {
+  @include font-size(2);
+}
+
+h3 {
+  @include font-size(1.8);
+}
+
+h4 {
+  @include font-size(1.6);
+}
+
+h5 {
+  @include font-size(1.3);
+}
+
+// TOUCH WOOD SPECIFICS
+
+html, body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+// START NORMAL SCREEN BEHAVIOR : THIN MENU _ MOBILE
+body {
+  // Enable momentum scrolling on touch devices
+  // source: http://www.mobify.com/blog/beginners-guide-to-perceived-performance
+  -webkit-overflow-scrolling: touch;
+  background-position: center bottom;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background: lighten($black, 2%);
+  color: $white;
+
+  #welcome,
+  #welcome.minimized {
+    position: relative;
+    background: lighten($black, 2%);
+    color: $white;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+  }
+
+  #languages {
+    background: lighten($black, 2%);
+    color: $white;
+    border-bottom: 1px solid darken($white, 70%) !important;
+    height: 40px;
+
+    #lang_sel_list {
+      margin: 5px 1em 0px 5px;
+    }
+
+    ul {
+      list-style: none;
+
+      @include font-size(0.8);
+
+      margin: 0;
+
+      li {
+        float: right;
+        display: block;
+        background: transparent;
+        margin: 0;
+
+        a {
+          @extend .button;
+
+          display: block;
+          margin: 0 0 0 1em;
+        }
+
+        &.current-lang a {
+          @extend .button:active;
+
+          color: $white !important;
+        }
+      }
+    }
+  }
+
+  p {
+    line-height: 1.5;
+  }
+
+  #branding {
+    padding: 0;
+    height: auto;
+    position: relative;
+    margin: 0;
+    padding: 1em;
+    color: $white;
+    overflow: hidden;
+    width: 100%;
+
+    @include font-size(1);
+
+    #logo {
+      display: block;
+      margin: 0;
+      padding: 0;
+      width: 239px;
+      height: 75px;
+      background: transparent url(../images/touchwood-logo-sans-slogan-nobelBold-black.png) top left no-repeat;
+      background-size: contain;
+      float: left;
+      max-width: 50%;
+    }
+
+    #tagline {
+      position: absolute;
+      top: 70px;
+      left: 15px;
+      max-width: 50%;
+    }
+
+    #contact-info {
+      // float: right;
+      // clear: right;
+      margin: 0;
+
+      // width: 40%;
+      // max-width: 40%;
+      line-height: 1.5;
+      text-align: right;
+      text-decoration: none;
+      color: white;
+
+      a {
+        border-bottom-width: 0;
+        color: white;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    #main-menu {
+      position: relative;
+      margin: 0 auto;
+      text-align: center;
+      float: right;
+      width: 40%;
+      width: 45%;
+
+      li {
+        display: block;
+        margin: 0 0 5px;
+
+        a {
+          @extend .button;
+
+          @include font-size(1);
+
+          display: block;
+          text-align: center;
+          text-transform: uppercase;
+        }
+      }
+
+      li.current_page_item,
+      li.current-menu-item {
+        a {
+          @extend .button:active;
+
+          border: 1px solid $highlight-color !important;
+          background: $highlight-color;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+body.home {
+  #welcome {
+    height: auto;
+    background: transparent;
+    position: relative;
+    overflow: hidden;
+
+    #branding {
+      padding: 0;
+      background-color: white;
+      overflow: hidden;
+      height: auto;
+
+      #logo {
+        margin: 0 auto;
+        width: 331px;
+        height: 120px;
+        display: block;
+        background: transparent url(../images/touchwood-logo-sans-slogan-nobelBold.png) top left no-repeat;
+        background-size: contain;
+        border-bottom: 0px;
+        float: none;
+        max-width: 100%;
+
+        b {
+          display: none;
+        }
+      }
+
+      #tagline {
+        margin-top: 20px;
+        left: auto;
+        position: relative;
+        top: auto;
+        max-width: 100%;
+      }
+
+      #tagline,
+      #contact-info {
+        padding: 0;
+        position: relative;
+        width: 100%;
+        max-width: auto;
+        margin: 10px auto;
+        text-align: center;
+        float: none;
+        clear: both;
+        display: block;
+        color: $black;
+
+        a {
+          color: $black;
+          font-size: 100%;
+        }
+      }
+
+      #main-menu {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        margin: 20px auto 0;
+        padding: 0;
+
+        ul {
+          padding: 0;
+          margin: 0;
+          width: 100%;
+
+          li {
+            max-width: 12em;
+            margin: 0 auto 10px;
+
+            a {
+              padding: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// END HOMEPAGE BEHAVIOR
+
+.row {
+  background: $white;
+  color: $black;
+  padding-top: 40px;
+
+  h1 {
+    strong {
+      font-size: 100%;
+    }
+  }
+
+  h2 {
+    text-align: center;
+  }
+}
+
+hr {
+  margin: 0 auto;
+  padding: 100px 0 0;
+  min-width: 80px;
+  background: transparent url(../images/separator-lines.png) center center no-repeat;
+  display: block;
+  border: 0;
+  clear: both;
+}
+
+.flxmap-container {
+  border: 1px solid #DDD;
+  padding: 4px;
+  background: white;
+  margin: 20px 0 50px;
+}
+
+/* SEARCH STOCK FORM */
+div.searchform-wrapper {
+  text-align: center !important;
+}
+
+// PRODUCT TAGS
+ul.tags-list {
+  display: block;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 20px;
+  list-style: none;
+  text-align: left;
+  overflow: hidden;
+  width: 100%;
+
+  li {
+    margin: 0 1%;
+    padding: 0;
+    line-height: 2;
+    border-bottom: 1px solid #E7E7E7;
+    float: left;
+    display: inline !important;
+
+    // 2 columns  = 50% each. Change percentage if you want more columns.
+    width: 48%;
+
+    a {
+      border-bottom: 0px;
+      color: $link-color;
+      font-weight: 400;
+      display: block;
+
+      &:hover {
+        color: darken($link-color, 25%);
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// PRODUCT LISTING
+.og-grid {
+  list-style: none;
+  padding: 20px 0;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+
+  li {
+    display: inline-block;
+    margin: 10px 5px 0 5px;
+    padding: 7px;
+    vertical-align: middle;
+    position: relative;
+    width: 250px;
+    min-height: 270px;
+    height: auto;
+    overflow: hidden;
+    background: lighten($black, 2%);
+    border: 2px solid lighten($black, 2%);
+    color: $white;
+    transition: all .5s ease-in-out;
+
+    @include border-radius(4px, 4px, 4px, 4px);
+
+    z-index: auto;
+
+    a {
+      position: relative;
+      border: none;
+      outline: none;
+      display: block;
+      vertical-align: middle;
+      color: $white;
+
+      h4 {
+        padding: 0;
+        margin: 3px 0;
+        font-weight: normal;
+        vertical-align: middle;
+        text-align: center;
+        text-transform: none;
+
+        @include font-size(1.2);
+      }
+
+      span.img-bckgrnd {
+        background: transparent;
+        display: block;
+        overflow: hidden;
+
+        @include border-radius(4px, 4px, 4px, 4px);
+
+        img {
+          position: relative;
+          width: auto;
+          max-width: 100%;
+          border: none;
+          outline: none;
+
+          @include border-radius(3px, 3px, 3px, 3px);
+
+          border: 1px solid $black;
+          border-color: lighten($black, 45%);
+          border: 0px;
+
+          @include transition(all 0.2s ease-in-out);
+        }
+
+        img.no-image {}
+      }
+
+      span.vendu {
+        position: absolute;
+        top: 2px;
+        left: -12px;
+        width: 250px;
+        height: 250px;
+        opacity: 1;
+        background: transparent url(../images/vendu2.png) bottom right no-repeat;
+
+        b {
+          display: none;
+        }
+      }
+
+      &:hover {
+        //z-index: 99;
+
+        span.img-bckgrnd img {
+          @include transform(scale(1.3));
+
+          border: 0;
+        }
+      }
+
+      span.vendu {
+        //opacity:0;
+
+      }
+    }
+  }
+}
+
+blockquote#citation {
+  text-align: center;
+  margin: 50px auto;
+  color: $white;
+  font-style: italic;
+  width: auto;
+  max-width: 600px;
+  line-height: 1.5;
+  display: block;
+
+  span {
+    background: $black;
+    background: $highlight-color;
+    color: $white;
+    padding: 1px 5px;
+
+    @include font-size(3);
+
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  cite {
+    background: $black;
+    padding: 5px;
+    clear: both;
+  }
+}
+
+/* FOOTER */
+footer {
+  background: lighten($black, 2%);
+  color: $white;
+  padding: 2em;
+
+  @include font-size(1.6);
+
+  text-align: center;
+
+  a {
+    color: $white;
+    border-color: $white;
+
+    &:hover {
+      border-color: white;
+    }
+  }
+}
+
+/* TEMPLATE: OBJET */
+
+body.objet {
+  .product {
+    .product-details {
+      background: $white;
+      padding: 0 2em;
+    }
+
+    h1 {
+      @include font-size(2);
+
+      padding-top: 0;
+      margin-top: 0;
+      font-weight: normal;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    .item-details {
+      ul {
+        margin-left: 0;
+        padding-left: 0;
+      }
+
+      li {
+        padding-left: 0;
+        margin-left: 0;
+        margin-bottom: 1em;
+        list-style: none;
+      }
+
+      .item-title {
+        display: block;
+        font-weight: bold;
+        font-weight: 700;
+      }
+    }
+
+    .flexslider.objet-images {
+      box-shadow: none;
+      border: 0;
+      border-radius: 0;
+      text-align: right;
+      margin-left: 1%;
+
+      .flex-direction-nav a {
+        border: none;
+      }
+
+      .slides li {
+        text-align: right;
+        border: 1px solid #DDD;
+        border-radius: 7px;
+        background: white;
+        padding: 5px;
+
+        img {
+          width: auto;
+          height: auto;
+          max-height: auto;
+          max-width: 100%;
+          border-radius: 7px;
+          margin: auto;
+        }
+      }
+
+      span.vendu {
+        position: absolute;
+        bottom: -2px;
+        right: -2px;
+        width: 250px;
+        height: 250px;
+        background: transparent url(../images/vendu2.png) bottom right no-repeat;
+
+        b {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .slideshow-controller {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: block;
+    clear: both;
+
+    li {
+      list-style-display: none;
+      display: inline-block;
+      margin: 3px .2%;
+      width: 24%;
+
+      img {
+        max-width: 100%;
+        height: auto;
+        padding: 5px;
+        border: 1px solid #DDD;
+        cursor: pointer;
+        opacity: .7;
+        background: white;
+
+        &.flex-active,
+        &:hover,
+        &:active,
+        &:focus {
+          opacity: 1;
+          background: white;
+          border-color: #999;
+        }
+      }
+    }
+  }
+}
+
+/******************************************************************
+PAGE NAVI STYLES
+******************************************************************/
+
+.pagination,
+.wp-prev-next {
+  margin: 1.1em 0 2.2em;
+}
+
+.pagination {
+  text-align: center;
+
+  ul {
+    display: inline-block;
+    white-space: nowrap;
+    padding: 0;
+    clear: both;
+    margin: 1px;
+
+    li {
+      padding: 0;
+      margin: 0 10px;
+      float: left;
+      display: inline;
+      overflow: hidden;
+
+      a, span {
+        margin: 0;
+        text-decoration: none;
+        padding: 0;
+        line-height: 1em;
+        font-size: 1em;
+        font-weight: normal;
+        padding: .5em;
+        min-width: 1em;
+        display: block;
+      }
+
+      a {
+        background-color: $black;
+
+        //@extend .pure-button;
+        color: $white;
+
+        @include border-radius(3px, 3px, 3px, 3px);
+
+        text-decoration: none;
+        border: 1px solid $black;
+      }
+
+      span.current {
+        font-weight: bold;
+        background-color: transparent;
+        color: $black;
+
+        @include border-radius(3px, 3px, 3px, 3px);
+
+        border: 1px solid $black;
+      }
+
+      a:hover, a:focus {
+        background-color: $white;
+        color: $black;
+      }
+    }
+  }
+}
+
+/* end .bones_page_navi */
+
+/* fallback previous & next links */
+.wp-prev-next {
+  ul {}
+
+  .prev-link {
+    float: left;
+  }
+
+  .next-link {
+    float: right;
+  }
+}
+
+/* end .wp-prev-next */
+/* PAGE */
+article {
+  margin: 1em;
+
+  .entry-content {
+    max-width: 45em;
+    margin: auto;
+
+    h2 {
+      text-transform: none;
+      font-weight: bold;
+      font-size: 160%;
+      text-align: left;
+      margin-top: 2em;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    p, li {
+      text-align: left;
+      font-size: 160%;
+      line-height: 1.4;
+    }
+
+    a {
+      @extend .button;
+    }
+
+    a[target="_blank"]:after {
+      content: " ";
+      font-size: 130%;
+      vertical-align: baseline;
+    }
+  }
+}
+
+.post-edit-link {
+  margin-top: 2em;
+
+  @extend .button;
+}
+
+// Search Form
+form.search-stock {
+  max-width: 480px;
+  margin: 50px auto;
+  text-align: center;
+  line-height: 3;
+  display: block;
+
+  label {
+    display: block;
+    font-weight: normals;
+    text-transform: uppercase;
+  }
+
+  .search-input{
+    padding: 1px 3px;
+    height: 24px;
+
+    @include rem(min-width 30);
+  }
+}

@@ -11,6 +11,7 @@ if (isset($URL) && $URL != 'home')
   include CONTROLLERS . 'router.php';
   include VIEWS . 'footer.html';
 }
+
 else
 {
   include VIEWS . 'header.html';
@@ -18,6 +19,4 @@ else
   include CONTROLLERS . 'router.php';
   include VIEWS . 'footer.html';
 }
-
-
  ?>
