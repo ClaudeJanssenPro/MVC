@@ -3,11 +3,11 @@ require 'controllers/globals.php';
 
 include CONTROLLERS . 'debug.php';
 
-if (isset($URL) && $URL != 'home')
+if (isset($URL) && $URL != 'main')
 {
   include VIEWS . 'header.html';
-  include VIEWS . 'subheader.html';
-  include VIEWS . 'menu.html';
+  include VIEWS . 'aside.html';
+  include VIEWS . 'nav.html';
   include CONTROLLERS . 'router.php';
   include VIEWS . 'footer.html';
 }
@@ -15,7 +15,7 @@ if (isset($URL) && $URL != 'home')
 else
 {
   include VIEWS . 'header.html';
-  include VIEWS . 'menu.html';
+  include VIEWS . 'nav.html';
   include CONTROLLERS . 'router.php';
   include VIEWS . 'footer.html';
 }

@@ -4,9 +4,9 @@ $action = isset($_GET['action']) ? htmlentities($_GET['action']) : 'default';
 $controller = '';
 
 switch ($action) {
-  case 'home':
-    require_once ( CONTROLLERS . 'home.php');
-    $controller = new HomeController();
+  case 'main':
+    require_once ( CONTROLLERS . 'main.php');
+    $controller = new MainController();
   break;
 
   case 'makingof':
@@ -36,8 +36,8 @@ switch ($action) {
 
 
   default:
-    require_once ( CONTROLLERS . 'home.php');
-    $controller = new HomeController();
+    require_once ( CONTROLLERS . 'main.php');
+    $controller = new MainController();
     break;
 }
 

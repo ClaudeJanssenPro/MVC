@@ -2,7 +2,7 @@
 /**
  *
  */
-class homeController
+class MainController
 {
 
   function __construct()
@@ -12,7 +12,7 @@ class homeController
 
   public function run(){
 
-		require_once VIEWS . 'home.html';
+		require_once VIEWS . 'main.html';
 
 	}
 
