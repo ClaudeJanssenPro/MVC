@@ -1,27 +1,154 @@
 body {
-  margin:0px;
+	margin:0px;
 	/* When using the shorthand property the order of the property values is:
      background-color
      background-image
      background-repeat
-     background-attachment
-     background-position */
-	background: #ffffff url('../../images/NY_docks_o.jpg') no-repeat center fixed;
+     background-attachment:  scroll|fixed|local|initial|inherit;
+     background-position:left top
+				left center
+				left bottom
+				right top
+				right center
+				right bottom
+				center top
+				center center
+				center bottom
+		 */
+	background: #ffffff url('../../images/NY_docks_o.jpg')  no-repeat fixed center bottom;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
 }
-	body > div{
-	  display:flex;
-	  flex-flow:row wrap;
+header{
+	background: #272727;
+	border-bottom: 1px solid black;
+	height: 40px;
+}
+main{
+  display:flex;
+	flex-direction: column;
 	}
-	body > div > header, nav, main, aside, footer{
-	  border-radius:7px;
-	  margin:5px;
-	  padding:20px;
+#main_card {
+	order:1;
+	display:flex;
+	flex-direction: column;
+	margin: auto auto;
+	border-radius: 7px;
+	padding: 10px;
+	height: 80px;
+	/* flex:1; */
+	background: #ffffff;
+	border-bottom: 1px solid #333;
+	overflow: visible;
+}
+	#card_top{
+		order:1;
+		display:flex;
+		flex-direction: row;
 	}
-	body > div > header, nav, footer{
+		#card_logo {
+			order:1;
+			margin: 0;
+			width: 239px;
+			height: 75px;
+			background:  url('../../images/touchwood-logo-sans-slogan-nobelBold-black.png') top left no-repeat;
+			background-size: contain;
+			/* float: left;
+			max-width: auto; */
+		}
+		#card_names{
+			order:2;
+			display:flex;
+			flex-direction: column;
+		  /* border: 0;
+		  clip: rect(0 0 0 0);
+		  height: 1px;
+		  margin: -1px;
+		  overflow: hidden;
+		  padding: 0;
+		  position: absolute;
+		  width: 1px; */
+		}
+		#card_fname{
+			order:1;
+
+		}
+		#card_lname{
+			order:2;
+
+		}
+	#card_bottom{
+		order:2;
+		display:flex;
+		flex-direction: column;
+	}
+
+		#card_labels {
+			order:1;
+			/* display: block;
+			position: absolute;
+			margin-top: -35px;
+			top: 0;
+			left: 0;
+			color: $white;
+			float: left; */
+		}
+		#card_phone {
+			order:2;
+			/* float: right;
+			clear: right;
+			padding: 0.5em;
+			margin: 0;
+			margin-right: 2em;
+			line-height: 2;
+			vertical-align: middle;
+			width: 20%;
+			display: inline-block;
+			line-height: 1.5;
+			vertical-align: middle;
+			text-align: right;
+			text-decoration: none;
+			/* color: white; */ */
+		}
+		#card_nav {
+			order:3;
+			/* float: right;
+			clear: right;
+			padding: 0.5em;
+			margin: 0;
+			margin-right: 2em;
+			line-height: 2;
+			vertical-align: middle;
+			width: 20%;
+			display: inline-block;
+			line-height: 1.5;
+			vertical-align: middle;
+			text-align: right;
+			text-decoration: none;
+			/* color: white; */ */
+		}
+
+		#card_nav a {
+			border-bottom-width: 0;
+			/* color: white; */
+		}
+/*
+#contact-link {
+	display: inline;
+	border-bottom-width: 1px;
+	margin-left: 10px;
+} */
+#citation {
+	order:2;
+}
+
+				/* &:before {
+					content: '\A';
+				} */
+
+	/* body > div > header, nav, footer{
 		color: #f0f0f0;
 		font-size: 20px;
 		text-shadow: 2px 2px 6px #000;
@@ -32,27 +159,22 @@ body {
 		border-radius:7px;
 		margin:5px;
 		padding:20px;
-	}
-	body > div > header{
+	} */
+	/* body > div > header{
 	  order:-1;
 	  height:40px;
 	  flex:0 1 100%;
-	}
-	body > div > nav{
+	} */
+	/* body > div > nav{
 	  order:1;
 	  flex:0 1 200px;
-	}
-	body > div > main{
-	  order:2;
-	  min-height:400px;
-	  flex:1;
-	}
-	body > div > aside{
+	} */
+	/* body > div > aside{
 	  order:4;
 	  flex:0 1 200px;
-	}
-	body > div > footer{
+	} */
+	/* body > div > footer{
 	  height:100px;
 	  order:5;
 	  flex:0 1 100%;
-	}
+	} */
