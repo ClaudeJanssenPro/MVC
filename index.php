@@ -6,8 +6,8 @@ include CONTROLLERS . 'debug.php';
 if (isset($URL) && $URL != 'main')
 {
   include VIEWS . 'header.html';
-  include VIEWS . 'aside.html';
-  include VIEWS . 'nav.html';
+  // include VIEWS . 'aside.html';
+  // include VIEWS . 'nav.html';
   include CONTROLLERS . 'router.php';
   include VIEWS . 'footer.html';
 }
@@ -15,7 +15,7 @@ if (isset($URL) && $URL != 'main')
 else
 {
   include VIEWS . 'header.html';
-  include VIEWS . 'nav.html';
+  // include VIEWS . 'nav.html';
   include CONTROLLERS . 'router.php';
   include VIEWS . 'footer.html';
 }

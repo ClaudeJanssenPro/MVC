@@ -1,20 +1,7 @@
+@import url("normalize.css");
+
 body {
 	margin:0px;
-	/* When using the shorthand property the order of the property values is:
-     background-color
-     background-image
-     background-repeat
-     background-attachment:  scroll|fixed|local|initial|inherit;
-     background-position:left top
-				left center
-				left bottom
-				right top
-				right center
-				right bottom
-				center top
-				center center
-				center bottom
-		 */
 	background: #ffffff url('../../images/NY_docks_o.jpg')  no-repeat fixed center bottom;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -33,35 +20,47 @@ main{
 	#main_card {
 		display:flex;
 		flex-direction: column;
-		margin: auto auto;
-		border-radius: 7px;
-		padding: 10px;
-		height: 80px;
-		/* flex:1; */
-		background: #ffffff;
-		/* border-bottom: 1px solid #333;
-		overflow: visible; */
+		margin-left: 38%;
+	  margin-top: 200px;
+	  padding: 30px 20px 30px 20px;
+	  border: 2px solid #FFFF;
+	  border-radius: 10px;
+	  width: 380px;
+	  /* height: 250px; */
+		background-color: #FFFFFF;
 	}
 	#card_logo {
-		margin: 0;
+		/* margin: 0;
 		width: 239px;
 		height: 75px;
-		background:  url('../../images/touchwood-logo-sans-slogan-nobelBold-black.png') top left no-repeat;
-		background-size: contain;
 		float: left;
-		max-width: auto;
+		max-width: auto; */
+ 		/* border:1px solid black; */
 	}
+	ul {
+	  list-style-type: none;
+	  margin: 0;
+	  padding: 0;
+	  display: flex;
+	  justify-content: center;
+	}
+
+	ul li {
+	  display: inline;
+	  line-height: 1.8em;
+	  margin: 0 24px;
+	  list-style-type: none;
+	  text-align: center;
+	  justify-content: space-between;
+	}
+
 	#card_labels {
-		display: block;
-		position: absolute;
-		margin-top: -35px;
-		top: 0;
-		left: 0;
-		color: $white;
-		float: left;
+		font-size: 14px;
+	  text-align: center;
+		line-height: 30px;
 	}
 	#card_phone {
-		float: right;
+		/* float: right;
 		clear: right;
 		padding: 0.5em;
 		margin: 0;
@@ -73,11 +72,11 @@ main{
 		line-height: 1.5;
 		vertical-align: middle;
 		text-align: right;
-		text-decoration: none;
+		text-decoration: none; */
 		/* color: white; */
 	}
 	#card_nav {
-		order:3;
+		/* order:3;
 		float: right;
 		clear: right;
 		padding: 0.5em;
@@ -90,7 +89,7 @@ main{
 		line-height: 1.5;
 		vertical-align: middle;
 		text-align: right;
-		text-decoration: none;
+		text-decoration: none; */
 		/* color: white; */
 	}
 
