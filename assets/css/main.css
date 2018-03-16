@@ -30,119 +30,80 @@ main{
   display:flex;
 	flex-direction: column;
 	}
-#main_card {
-	order:1;
-	display:flex;
-	flex-direction: column;
-	margin: auto auto;
-	border-radius: 7px;
-	padding: 10px;
-	height: 80px;
-	/* flex:1; */
-	background: #ffffff;
-	border-bottom: 1px solid #333;
-	overflow: visible;
-}
-	#card_top{
-		order:1;
-		display:flex;
-		flex-direction: row;
-	}
-		#card_logo {
-			order:1;
-			margin: 0;
-			width: 239px;
-			height: 75px;
-			background:  url('../../images/touchwood-logo-sans-slogan-nobelBold-black.png') top left no-repeat;
-			background-size: contain;
-			/* float: left;
-			max-width: auto; */
-		}
-		#card_names{
-			order:2;
-			display:flex;
-			flex-direction: column;
-		  /* border: 0;
-		  clip: rect(0 0 0 0);
-		  height: 1px;
-		  margin: -1px;
-		  overflow: hidden;
-		  padding: 0;
-		  position: absolute;
-		  width: 1px; */
-		}
-		#card_fname{
-			order:1;
-
-		}
-		#card_lname{
-			order:2;
-
-		}
-	#card_bottom{
-		order:2;
+	#main_card {
 		display:flex;
 		flex-direction: column;
+		margin: auto auto;
+		border-radius: 7px;
+		padding: 10px;
+		height: 80px;
+		/* flex:1; */
+		background: #ffffff;
+		/* border-bottom: 1px solid #333;
+		overflow: visible; */
+	}
+	#card_logo {
+		margin: 0;
+		width: 239px;
+		height: 75px;
+		background:  url('../../images/touchwood-logo-sans-slogan-nobelBold-black.png') top left no-repeat;
+		background-size: contain;
+		float: left;
+		max-width: auto;
+	}
+	#card_labels {
+		display: block;
+		position: absolute;
+		margin-top: -35px;
+		top: 0;
+		left: 0;
+		color: $white;
+		float: left;
+	}
+	#card_phone {
+		float: right;
+		clear: right;
+		padding: 0.5em;
+		margin: 0;
+		margin-right: 2em;
+		line-height: 2;
+		vertical-align: middle;
+		width: 20%;
+		display: inline-block;
+		line-height: 1.5;
+		vertical-align: middle;
+		text-align: right;
+		text-decoration: none;
+		/* color: white; */
+	}
+	#card_nav {
+		order:3;
+		float: right;
+		clear: right;
+		padding: 0.5em;
+		margin: 0;
+		margin-right: 2em;
+		line-height: 2;
+		vertical-align: middle;
+		width: 20%;
+		display: inline-block;
+		line-height: 1.5;
+		vertical-align: middle;
+		text-align: right;
+		text-decoration: none;
+		/* color: white; */
 	}
 
-		#card_labels {
-			order:1;
-			/* display: block;
-			position: absolute;
-			margin-top: -35px;
-			top: 0;
-			left: 0;
-			color: $white;
-			float: left; */
-		}
-		#card_phone {
-			order:2;
-			/* float: right;
-			clear: right;
-			padding: 0.5em;
-			margin: 0;
-			margin-right: 2em;
-			line-height: 2;
-			vertical-align: middle;
-			width: 20%;
-			display: inline-block;
-			line-height: 1.5;
-			vertical-align: middle;
-			text-align: right;
-			text-decoration: none;
-			/* color: white; */ */
-		}
-		#card_nav {
-			order:3;
-			/* float: right;
-			clear: right;
-			padding: 0.5em;
-			margin: 0;
-			margin-right: 2em;
-			line-height: 2;
-			vertical-align: middle;
-			width: 20%;
-			display: inline-block;
-			line-height: 1.5;
-			vertical-align: middle;
-			text-align: right;
-			text-decoration: none;
-			/* color: white; */ */
-		}
-
-		#card_nav a {
-			border-bottom-width: 0;
-			/* color: white; */
-		}
+	#card_nav a {
+		border-bottom-width: 0;
+		/* color: white; */
+	}
 /*
 #contact-link {
 	display: inline;
 	border-bottom-width: 1px;
 	margin-left: 10px;
 } */
-#citation {
-	order:2;
-}
 
 				/* &:before {
 					content: '\A';
