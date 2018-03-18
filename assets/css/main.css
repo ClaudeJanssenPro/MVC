@@ -1,19 +1,26 @@
 @import url("normalize.css");
 
 body {
+	display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 	margin:0px;
 	background: #ffffff url('../../images/NY_docks_o.jpg')  no-repeat fixed center bottom;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-}
+	font-family: "Lato","Avenir Next",sans-serif;
+	}
+/* header.html */
 header{
 	background: #272727;
 	border-bottom: 1px solid black;
 	height: 40px;
 }
+/* main.html */
 main{
+	/* margin: auto; */
   display:flex;
 	flex-direction: column;
 	}
@@ -26,115 +33,120 @@ main{
 	  border: 2px solid #FFFF;
 	  border-radius: 10px;
 	  width: 380px;
-	  /* height: 250px; */
 		background-color: #FFFFFF;
 	}
-	#card_logo {
-		/* margin: 0;
-		width: 239px;
-		height: 75px;
-		float: left;
-		max-width: auto; */
- 		/* border:1px solid black; */
-	}
-	ul {
-	  list-style-type: none;
-	  margin: 0;
-	  padding: 0;
-	  display: flex;
-	  justify-content: center;
-	}
+		#card_logo	img {
+			width: 385px;
+			height: 141px;
+		}
+		#card_labels {
+			font-size: 13px;
+		  text-align: center;
+		}
+		#card_phone {
+		  text-align: center;
+			padding: 0.5em;
+			margin: 0;
+			margin-right: 2em;
+			display: inline-block;
+			font-size: 14px;
+		}
+		#card_phone a {
+			color: #272727;
+			text-decoration: none;
+		}
+		#card_phone a:hover {
+    	text-decoration: underline;
+		}
+		#card_phone a:active {
+    text-decoration: underline;
+		}
+		#card_nav {
+			font-size: 10px;
+			text-transform: uppercase;
+		}
+		#card_nav a:link, a:visited {
+	    background-color: #272727;
+	    color: white;
+	    padding: 7px 12px;
+	    text-align: center;
+	    text-decoration: none;
+	    display: inline-block;
+			border-radius: 5px;
+		}
+		#card_nav a:hover, a:active {
+	    background-color: grey
+		}
+		#card_nav	ul {
+		  margin: 0;
+		  padding: 0;
+		}
+		#card_nav ul li {
+		  display: inline;
+		  /* line-height: 1.8em; */
+		  margin: 0 24px;
+		  list-style-type: none;
+		  text-align: center;
+		  justify-content: space-between;
+		}
 
-	ul li {
-	  display: inline;
-	  line-height: 1.8em;
-	  margin: 0 24px;
-	  list-style-type: none;
-	  text-align: center;
-	  justify-content: space-between;
-	}
-
-	#card_labels {
-		font-size: 14px;
-	  text-align: center;
-		line-height: 30px;
-	}
-	#card_phone {
-		/* float: right;
-		clear: right;
-		padding: 0.5em;
-		margin: 0;
-		margin-right: 2em;
-		line-height: 2;
-		vertical-align: middle;
-		width: 20%;
-		display: inline-block;
-		line-height: 1.5;
-		vertical-align: middle;
-		text-align: right;
-		text-decoration: none; */
-		/* color: white; */
-	}
-	#card_nav {
-		/* order:3;
-		float: right;
-		clear: right;
-		padding: 0.5em;
-		margin: 0;
-		margin-right: 2em;
-		line-height: 2;
-		vertical-align: middle;
-		width: 20%;
-		display: inline-block;
-		line-height: 1.5;
-		vertical-align: middle;
-		text-align: right;
-		text-decoration: none; */
-		/* color: white; */
-	}
-
-	#card_nav a {
-		border-bottom-width: 0;
-		/* color: white; */
-	}
-/*
-#contact-link {
-	display: inline;
-	border-bottom-width: 1px;
-	margin-left: 10px;
-} */
-
-				/* &:before {
-					content: '\A';
-				} */
-
-	/* body > div > header, nav, footer{
-		color: #f0f0f0;
-		font-size: 20px;
-		text-shadow: 2px 2px 6px #000;
-		text-align: center;
-		background: #999999;
-		background: linear-gradient(#999, #333);
-		background-color: gray;
-		border-radius:7px;
-		margin:5px;
-		padding:20px;
-	} */
-	/* body > div > header{
-	  order:-1;
-	  height:40px;
-	  flex:0 1 100%;
-	} */
-	/* body > div > nav{
-	  order:1;
-	  flex:0 1 200px;
-	} */
-	/* body > div > aside{
-	  order:4;
-	  flex:0 1 200px;
-	} */
-	/* body > div > footer{
-	  height:100px;
-	  order:5;
-	  flex:0 1 100%;
-	} */
+blockquote {
+	display:flex;
+	color: #F7F7F7;
+	font-family: "Lato","Avenir Next",sans-serif;
+	margin: 100px auto 100px auto;
+	text-align: center;
+	font-style: italic;
+	width: auto;
+	max-width: 600px;
+	line-height: 1.5;
+	display: block;
+}
+blockquote span {
+	position: relative;
+	margin: 50px auto 20px auto;
+	background: #564E44;
+	font-size: 30px;
+	padding: 1px 5px;
+	display: block;
+	border-radius: .4em;
+}
+blockquote span::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 0.625em solid transparent;
+	border-top-color: #564E44;
+	border-bottom: 0;
+	border-right: 0;
+	margin-left: -0.312em;
+	margin-bottom: -0.625em;
+}
+blockquote cite {
+	/* margin-bottom: 10px; */
+	background: #222;
+	/* padding: 5px; */
+	clear: both;
+}
+/* footer.html */
+footer {
+	flex: 1;
+	background: #272727;
+	color: #F7F7F7;
+	padding: 2em;
+	text-align: center;
+}
+footer a {
+	color: #F7F7F7;
+	text-decoration: none;
+	border-bottom: 1px dotted;
+}
+footer a:hover {
+	text-decoration: underline;
+}
+footer a:active {
+text-decoration: underline;
+}
